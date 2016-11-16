@@ -1,0 +1,17 @@
+{
+  "name": "angular-test",
+  "private": true,
+  "version": "0.0.4",
+  "description": "TDD and BDD with Angular.js",
+  "repository": "https://github.com/eduardogch/angular-testing",
+  "dependencies": {
+    "bower": "^1.8.0",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0"
+  },
+  "scripts": {
+    "start": "node_modules/.bin/gulp",
+    "test": "node_modules/.bin/gulp test",
+    "prepublish": "node_modules/.bin/bower install"
+  }
+}

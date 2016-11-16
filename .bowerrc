@@ -1,0 +1,5 @@
+{
+      "directory": "app/assets/vendor",
+      "strict-ssl": false,
+      "allow_root": true
+}
