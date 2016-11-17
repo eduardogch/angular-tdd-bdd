@@ -17,7 +17,7 @@ module.exports = function(config) {
     exclude: [
     ],
     preprocessors: {
-      'source/app/**/!(*.spec|*.mock).js': ['coverage']
+      'test/tdd/**/!(*.spec|*.mock).js': ['coverage']
     },
     reporters: ['mocha', 'coverage'],
     coverageReporter: {
@@ -25,7 +25,7 @@ module.exports = function(config) {
       dir: 'coverage',
       subdir : 'PhantomJS'
     },
-    dest: 'coverage/PhantomJS',
+    dest: __dirname + 'coverage/PhantomJS',
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
