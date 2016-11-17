@@ -1,24 +1,25 @@
 var gulp = require('gulp'),
-  connect = require('gulp-connect'),
-  chimp = require('gulp-chimp');
+    connect = require('gulp-connect'),
+    chimp = require('gulp-chimp'),
+    karma = require('karma').Server;
 
-gulp.task('connect', function () {
-  connect.server({
-    root: 'app',
-    livereload: true
-  });
+gulp.task('connect', function() {
+    connect.server({
+        root: 'app',
+        livereload: true
+    });
 });
 
-gulp.task('html', function () {
-  gulp.src('./app/*.html')
-    .pipe(connect.reload());
+gulp.task('html', function() {
+    gulp.src('./app/*.html')
+        .pipe(connect.reload());
 });
 
-gulp.task('watch', function () {
-  gulp.watch(['./app/*.html'], ['html']);
+gulp.task('watch', function() {
+    gulp.watch(['./app/*.html'], ['html']);
 });
 
-gulp.task('bdd', ['connect'], function () {
+gulp.task('bdd', ['connect'], function() {
     return chimp({
         features: './test/bdd', // Cucumber features files
         browser: 'phantomjs',
@@ -38,8 +39,17 @@ gulp.task('bdd', ['connect'], function () {
     });
 });
 
-gulp.task('tdd', function () {
-    console.log('hola');
+gulp.task('tdd', function(done) {
+    karma.start({
+        configFile: __dirname + '/karma.conf.js',
+        singleRun: false
+    }, function(code) {
+        if (code == 1) {
+            process.exit(code);
+        } else {
+            done();
+        }
+    });
 });
 
 gulp.task('default', ['connect', 'watch']);
