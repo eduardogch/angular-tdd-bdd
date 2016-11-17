@@ -1,0 +1,7 @@
+--require should
+--reporter mocha-istanbul
+--ui bdd
+--recursive
+--colors
+--timeout 6000
+--slow 3000

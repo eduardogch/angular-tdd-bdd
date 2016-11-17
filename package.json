@@ -7,7 +7,8 @@
   "dependencies": {
     "bower": "^1.8.0",
     "gulp": "^3.9.1",
-    "gulp-connect": "^5.0.0"
+    "gulp-connect": "^5.0.0",
+    "gulp-chimp": "^2.1.0"
   },
   "scripts": {
     "start": "node_modules/.bin/gulp",
