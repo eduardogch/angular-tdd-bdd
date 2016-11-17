@@ -11,12 +11,24 @@ gulp.task('connect', function() {
 });
 
 gulp.task('html', function() {
-    gulp.src('./app/*.html')
+    gulp.src('./app/src/**/*.html')
+        .pipe(connect.reload());
+});
+
+gulp.task('css', function() {
+    gulp.src('./app/assets/styles/**/*.css')
+        .pipe(connect.reload());
+});
+
+gulp.task('js', function() {
+    gulp.src('./app/src/**/*.js')
         .pipe(connect.reload());
 });
 
 gulp.task('watch', function() {
-    gulp.watch(['./app/*.html'], ['html']);
+    gulp.watch(['./app/assets/styles/**/*.css'], ['css']);
+    gulp.watch(['./app/**/*.html'], ['html']);
+    gulp.watch(['./app/src/**/*.js',], ['js']);
 });
 
 gulp.task('bdd', ['connect'], function() {
