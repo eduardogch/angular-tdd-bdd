@@ -25,7 +25,7 @@ In the terminal run the following command
 
 ## TDD Report
 
-![alt tag](https://github.com/eduardogch/angular-testing/raw/master/istanbul.png)
+![alt tag](https://github.com/eduardogch/angular-testing/raw/master/istabul.png)
 
 ## BDD Report
 
