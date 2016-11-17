@@ -5,11 +5,6 @@ Feature: Use browser inside steps
   So that I don't have to configure my world object and I focus on testing
 
   @watch, @focus
-  Scenario: Visit Google
-    When  I visit "http://www.google.com.mx"
-    Then  I see the title of "Google"
-
-  @not-watch
-  Scenario: Visit Github
-    When  I visit "http://www.github.com"
-    Then  I see the title of "How people build software · GitHub"
+  Scenario: Visit Angular Testing App
+    When  I visit "http://localhost:8080"
+    Then  I see the title of "Angular Material - Starter App"

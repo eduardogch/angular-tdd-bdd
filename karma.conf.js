@@ -18,6 +18,7 @@ module.exports = function(config) {
             'app/src/**/*.js',
             // Test files
             'test/tdd/**/*.spec.js',
+            'test/tdd/spec-helper.js',
         ],
         exclude: [],
         preprocessors: {
