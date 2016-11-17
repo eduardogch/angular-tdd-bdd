@@ -23,6 +23,10 @@ In the terminal run the following command
 - `gulp bdd` for run a BDD test.
 
 
-## Cucumber HTML Report
+## TDD Report
+
+![alt tag](https://github.com/eduardogch/angular-testing/raw/master/istanbul.png)
+
+## BDD Report
 
 ![alt tag](https://github.com/eduardogch/gulp-chimp/raw/master/cucumber-html-report.png)
